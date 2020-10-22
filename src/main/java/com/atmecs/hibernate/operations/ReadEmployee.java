@@ -23,8 +23,8 @@ public class ReadEmployee {
 	        	ClassEmployee employee = new ClassEmployee();
 	        	System.out.println("Enter the ID you want to Read");
 	        	int id = scan.nextInt();
-	        	//employee.setId(id);
-	        	session.read(employee);
+	        //	ClassEmployee.setId(id);
+	        	session.getIdentifier(employee);
 	        	
 	        	session.getTransaction().commit();
 	        }

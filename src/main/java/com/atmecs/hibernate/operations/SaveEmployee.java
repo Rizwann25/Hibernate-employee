@@ -7,17 +7,17 @@ import org.hibernate.SessionException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.atmecs.hibernate.entity.Employee;
+import com.atmecs.hibernate.entity.ClassEmployee;
 
 public class SaveEmployee {
 	 public void saveRecord() {
 	        Scanner scan = new Scanner(System.in);
-	        SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Employee.class)
+	        SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(ClassEmployee.class)
 	        .buildSessionFactory();
 	        Session session = factory.getCurrentSession();
 	        try {
 	        	session.beginTransaction();
-	        	Employee employee = new Employee();
+	        	ClassEmployee employee = new ClassEmployee();
 	        	System.out.println("Enter the ID you want to Save");
 	        	int id = scan.nextInt();
 	        //	employee.setId(id);
